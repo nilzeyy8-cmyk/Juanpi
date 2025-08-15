@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Pablo Lujano Molina - Mi Portafolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1505506874110-6a7a69069a08') center/cover fixed no-repeat;
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background-color: rgba(30, 30, 40, 0.85);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+            border-bottom: 2px solid #4e54c8;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(78, 84, 200, 0.7);
+            letter-spacing: 1px;
+        }
+        
+        .sub {
+            font-size: 1.8rem;
+            color: #a5a7ff;
+            margin-top: 10px;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .card {
+            background: rgba(40, 40, 60, 0.8);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card h2 {
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .card p {
+            font-size: 1.3rem;
+            color: #d0d0ff;
+            margin-top: 10px;
+        }
+        
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a5a7ff;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .sub {
+                font-size: 1.4rem;
+            }
+            
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .glow {
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #4e54c8, 0 0 20px #4e54c8;
+            }
+            to {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #8f94fb, 0 0 40px #8f94fb;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hola, yo soy <span class="glow">Juan Pablo Lujano Molina</span></h1>
+            <h2 class="sub">Cosas sobre mi</h2>
+        </header>
+        
+        <div class="content">
+            <div class="card">
+                <h2>El auto de mis sueños</h2>
+                <div class="card-content">
+                    <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Kia Stinger">
+                    <p>Kia Stinger</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Mi videojuego favorito</h2>
+                <div class="card-content">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Uncharted">
+                    <p>Uncharted 3</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Mi serie favorita</h2>
+                <div class="card-content">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Dr House">
+                    <p>Dr House</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Álbum favorito</h2>
+                <div class="card-content">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Álbum musical">
+                    <p>Álbum A mis 20</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Evidencia 1 - Página personal | Desarrollado por Juan Pablo Lujano Molina</p>
+        </footer>
+    </div>
+</body>
+</html>
